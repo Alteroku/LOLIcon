@@ -224,7 +224,6 @@ int checkButtons(int port, tai_hook_ref_t ref_hook, SceCtrlData *ctrl, int count
 			unsigned int buttons = ctrl->buttons;
 			ctrl->buttons = 0;
 			if(ctrl->timeStamp > ctrl_timestamp + 300*1000) {
-				if( ksceKernelGetProcessId() == shell_pid) {
 					if (buttons & SCE_CTRL_LEFT){
 						switch(page) {
 							case 1:
